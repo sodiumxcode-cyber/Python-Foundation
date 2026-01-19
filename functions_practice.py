@@ -29,14 +29,12 @@ def WordFrequency(sentence) :
     freq = {}
 
     for w in words :
-        freq[w] = freq.get(w, 0) + 1
-
-    for w, c in freq.items():
-        print(w,  ":", c)
-
-    return -1
-
-WordFrequency("mango apple orange mango apple")
+        if w in freq:
+            freq[w] += 1
+        else :
+            freq[w] = 1
+    
+    return freq
 
 
 #Return Second Largest Num in List
