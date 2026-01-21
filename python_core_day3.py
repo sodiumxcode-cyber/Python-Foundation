@@ -23,3 +23,24 @@ def FlattenList1(list2):
         else:
             result.append(item)
     return result
+
+
+#Removing Duplicates while preserving the order(using sets)
+def RemoveDuplicates(nums):
+    seen = set()
+    result = []
+
+    for x in nums:
+        if x not in seen:
+            seen.add(x)
+            result.append(x)
+    return result
+
+
+#Removing Duplicates while preserving the order(without using sets)
+def RemoveDuplicates1(nums):
+    result = []
+    for x in nums:
+        if x not in result:
+            result.appedn(x)
+    return result
